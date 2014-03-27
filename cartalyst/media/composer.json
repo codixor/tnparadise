@@ -1,0 +1,54 @@
+{
+	"name": "cartalyst/media",
+	"description": "Media",
+	"keywords": ["media", "laravel"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Cartalyst LLC",
+			"email": "help@cartalyst.com"
+		},
+		{
+			"name": "Ben Corlett",
+			"email": "ben.corlett@cartalyst.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Bruno Gaspar",
+			"email": "bruno.gaspar@cartalyst.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Dan Syme",
+			"email": "dan.syme@cartalyst.com",
+			"role": "Project Lead"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"league/flysystem": "dev-master",
+		"illuminate/events": "~4",
+		"intervention/image": "dev-master",
+		"intervention/imagecache": "dev-master"
+	},
+	"require-dev": {
+		"illuminate/events": "~4",
+		"mockery/mockery": "0.8.*",
+		"phpunit/phpunit": "3.7.*"
+	},
+	"autoload": {
+		"files": [
+			"src/Cartalyst/Media/Exceptions.php"
+		],
+		"psr-0": {
+			"Cartalyst\\Media": "src/"
+		}
+	},
+	"extra": {
+		"component": "package",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	},
+	"minimum-stability": "dev"
+}

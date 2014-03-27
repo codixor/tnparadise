@@ -1,0 +1,21 @@
+/*
+Note: This is not a valid composer.json file. If you do not wish to host your
+      Extension a package or use workbench-style composer loading, be sure
+      to ensure the following is merged into your root composer.json file
+      before running `composer dump-autoload` to ensure the files from
+      your extension are loaded. Otherwise, feel free to delete this.
+*/
+
+{
+	"require": {
+		"cartalyst/composer-installers": "1.0.*"
+	},
+	"autoload": {
+		"classmap": [
+			{{classmap_autoloads}}
+		],
+		"psr-0": {
+			"{{vendor}}\\{{name}}": "extensions/{{lower_vendor}}/{{lower_name}}/src/"
+		}
+	}
+}

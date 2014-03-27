@@ -1,0 +1,31 @@
+{
+	"name": "{{lower_vendor}}/{{lower_name}}",
+	"type": "platform-extension",
+	"description": "{{description}}",
+	"authors": [
+		{
+			"name": "{{author}}",
+			"email": "{{email}}"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "http://packages.cartalyst.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"cartalyst/composer-installers": "1.0.*",
+		"illuminate/support": "4.1.x"
+	},
+	"autoload": {
+		"classmap": [
+			{{classmap_autoloads}}
+		],
+		"psr-0": {
+			"{{vendor}}\\{{name}}": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}

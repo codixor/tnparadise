@@ -1,0 +1,51 @@
+@extends('layouts/default')
+
+{{-- Page title --}}
+@section('title')
+{{ trans('platform/users::groups/general.title') }} ::
+@parent
+@stop
+
+{{-- Partial Assets --}}
+@section('assets')
+@parent
+@stop
+
+{{-- Inline Styles --}}
+@section('styles')
+@parent
+@stop
+
+{{-- Inline Scripts --}}
+@section('scripts')
+@parent
+<script>
+jQuery(document).ready(function($) {
+
+});
+</script>
+@stop
+
+{{-- Page content --}}
+@section('content')
+<section id="groups">
+
+	<header class="clearfix">
+		<h1>{{ trans('{{lower_vendor}}/{{lower_name}}::general.title') }}</h1>
+
+		<nav class="tertiary-navigation pull-right">
+			@widget('platform/menus::nav.show', array(2, 1, 'nav nav-pills', admin_uri()))
+		</nav>
+	</header>
+
+	<hr>
+
+	<section class="content">
+
+		<h3>{{ trans('{{lower_vendor}}/{{lower_name}}::general.byline') }}</h3>
+
+	</section>
+
+</section>
+@stop
+

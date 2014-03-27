@@ -1,0 +1,55 @@
+@extends('layouts/default')
+
+{{-- Page title --}}
+@section('title')
+{{ trans('platform/users::groups/general.title') }} ::
+@parent
+@stop
+
+{{-- Queue Assets --}}
+{{ Asset::queue('{{lower_vendor}}-{{lower_name}}', '{{lower_vendor}}/{{lower_name}}::css/style.css', 'bootstrap') }}
+{{ Asset::queue('{{lower_vendor}}-{{lower_name}}', '{{lower_vendor}}/{{lower_name}}::js/script.js', 'jquery') }}
+
+{{-- Partial Assets --}}
+@section('assets')
+@parent
+@stop
+
+{{-- Inline Styles --}}
+@section('styles')
+@parent
+@stop
+
+{{-- Inline Scripts --}}
+@section('scripts')
+@parent
+<script>
+jQuery(document).ready(function($) {
+
+});
+</script>
+@stop
+
+{{-- Page content --}}
+@section('page')
+<section id="{{lower_vendor}}-{{lower_name}}">
+
+	<header class="clearfix">
+		<h1>{{ trans('{{lower_vendor}}/{{lower_name}}::general.title') }}</h1>
+
+		<nav class="tertiary-navigation pull-right">
+			@widget('platform/menus::nav.show', array(2, 1, 'nav nav-pills', admin_uri()))
+		</nav>
+	</header>
+
+	<hr>
+
+	<section class="content">
+
+		<h3>{{ trans('{{lower_vendor}}/{{lower_name}}::general.byline') }}</h3>
+
+	</section>
+
+</section>
+@stop
+

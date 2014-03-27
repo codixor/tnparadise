@@ -1,0 +1,9 @@
+{
+	"name" : "Composer Installers",
+	"type" : "package",
+	"public" : false,
+	"branch" : "master",
+	"github" : "cartalyst/composer-installers",
+	"travis" : false,
+	"demo" : false
+}
